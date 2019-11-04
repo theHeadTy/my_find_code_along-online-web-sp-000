@@ -1,6 +1,8 @@
 require 'pry'
-def my_find(collection)
-  collection.select { |val|
-    return val if yield(val)
-  }
+def my_find(array)
+  i = 0
+  until i == array.length
+    return array[i] if yield(array[i])
+    i += 1
+  end
 end
