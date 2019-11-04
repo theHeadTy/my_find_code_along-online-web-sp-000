@@ -2,6 +2,6 @@ require_relative "../lib/my_find.rb"
 
 collection = (1..100).to_a
 
-my_find(1..100) { |i| i % 3 == 0 && i % 5 == 0 }
+my_find(collection) { |i| i % 3 == 0 && i % 5 == 0 }
 
-my_find(1..100) { |i| i % 200 == 0 }.empty? { nil }
+my_find(collection) { |i| i % 200 == 0 }
